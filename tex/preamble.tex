@@ -9,12 +9,15 @@
 % Примечание: Требует шаманства при установке, инструкция http://plumbum-blog.blogspot.com/2010/06/miktex-28-pscyr-04d.html
 % http://blog.harrix.org/?p=444
 % надо закомментировать это, чтобы использовать scalable-cyrfonts-tex:
-\usepackage{pscyr}
+% \usepackage{pscyr}
+
+% Зачем: Выбор внутренней TeX кодировки.
+\usepackage[T2A]{fontenc}
 
 % Зачем: Предоставляет свободный Times New Roman.
 % Шрифт идёт вместе с пакетом scalable-cyrfonts-tex в Ubuntu/Debian
 % раскомментировать, чтобы использовать scalable-cyrfonts-tex:
-%\usefont{T2A}{ftm}{m}{sl}
+\usefont{T2A}{ftm}{m}{sl}
 
 
 % Зачем: Установка кодировки исходных файлов.
@@ -23,8 +26,6 @@
 % Зачем: Делает результирующий PDF "searchable and copyable".
 \usepackage{cmap}
 
-% Зачем: Выбор внутренней TeX кодировки.
-\usepackage[T2A]{fontenc}
 
 % Зачем: Чтобы можно было использовать русские буквы в формулах, но в случае использования предупреждать об этом.
 \usepackage[warn]{mathtext}
