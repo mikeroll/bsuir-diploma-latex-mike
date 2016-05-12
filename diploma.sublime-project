@@ -1,0 +1,11 @@
+{
+    "folders":
+    [
+        {
+            "path": "."
+		}
+    ],
+    "settings": {
+        "color_scheme": "Packages/User/Material-Theme-Lighter (SublimePythonIDE).tmTheme",
+    }
+}
