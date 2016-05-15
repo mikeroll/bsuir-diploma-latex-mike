@@ -1,9 +1,12 @@
 LATEXMK=latexmk
-DIPLOMA_PDF=diploma.pdf
+DIPLOMA_SRC=diploma.tex
+
+all: diploma
 
 diploma:
-	$(LATEXMK) -pdf $(DIPLOMA_PDF)
+	$(LATEXMK) -pdf $(DIPLOMA_SRC)
 
 .PHONY: clean
 clean:
-	latexmk -c
+	$(LATEXMK) -c
+	rm -f *.bbl *.synctex.gz
