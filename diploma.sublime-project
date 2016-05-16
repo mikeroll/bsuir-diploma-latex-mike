@@ -2,7 +2,38 @@
     "folders":
     [
         {
-            "path": "."
+            "path": ".",
+            "folder_exclude_patterns": [".git"],
+            "file_exclude_patterns": [
+                "*.aux",
+                "*.lof",
+                "*.log",
+                "*.lot",
+                "*.fls",
+                "*.out",
+                "*.toc",
+                "*.fmt",
+                "*.fot",
+                "*.cb",
+                "*.cb2",
+                "*.dvi",
+                "*-converted-to.*",
+                "*.ps",
+                "*.eps",
+                "*.pdf",
+                "*.fdb_latexmk",
+                "*.synctex",
+                "*.synctex.gz",
+                "*.synctex.gz(busy)",
+                "*.pdfsync",
+                "*.bbl",
+                "*.bcf",
+                "*.blg",
+                "*-blx.aux",
+                "*-blx.bib",
+                "*.brf",
+                "*.run.xml"
+            ]
         }
     ],
     "settings": {

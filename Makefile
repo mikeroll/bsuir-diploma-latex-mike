@@ -9,4 +9,5 @@ diploma:
 .PHONY: clean
 clean:
 	$(LATEXMK) -c
+	(cd tex; $(LATEXMK) -c)
 	rm -f *.bbl *.synctex.gz
