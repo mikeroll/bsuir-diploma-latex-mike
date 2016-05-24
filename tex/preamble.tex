@@ -94,7 +94,11 @@
 \setcounter{secnumdepth}{3}
 
 
-% Зачем: Настраивает отступ между таблицей с содержанимем и словом СОДЕРЖАНИЕ
+% Зачем: subsubsection также должны присутствовать в содержании
+\setcounter{tocdepth}{3}
+
+
+% Зачем: Настраивает отступ между таблицей с содержанием и словом СОДЕРЖАНИЕ
 % Почему: Пункт 2.2.7 Требований по оформлению пояснительной записки.
 \usepackage{tocloft}
 \setlength{\cftbeforetoctitleskip}{-1em}
@@ -106,6 +110,7 @@
 \makeatletter
 \renewcommand{\l@section}{\@dottedtocline{1}{0.5em}{1.2em}}
 \renewcommand{\l@subsection}{\@dottedtocline{2}{1.7em}{2.0em}}
+\renewcommand{\l@subsubsection}{\@dottedtocline{3}{3.7em}{2.8em}}
 \makeatother
 
 
@@ -475,7 +480,7 @@
 \makeatletter
 \renewcommand\NAT@bibsetnum[1]{\settowidth\labelwidth{\@biblabel{#1}}%
    \setlength{\leftmargin}{\bibindent}\addtolength{\leftmargin}{\dimexpr\labelwidth+\labelsep\relax}%
-   \setlength{\itemindent}{-\bibindent+\fivecharsapprox-0.240cm}%
+   \setlength{\itemindent}{-\bibindent+\parindent-0.240cm}%
    \setlength{\listparindent}{\itemindent}
 \setlength{\itemsep}{\bibsep}\setlength{\parsep}{\z@}%
    \ifNAT@openbib
