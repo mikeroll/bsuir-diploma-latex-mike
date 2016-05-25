@@ -444,7 +444,7 @@
 \makeatletter
 \renewcommand\NAT@bibsetnum[1]{\settowidth\labelwidth{\@biblabel{#1}}%
    \setlength{\leftmargin}{\bibindent}\addtolength{\leftmargin}{\dimexpr\labelwidth+\labelsep\relax}%
-   \setlength{\itemindent}{-\bibindent+\parindent-0.240cm}%
+   \setlength{\itemindent}{-\bibindent+\fivecharsapprox-0.240cm}%
    \setlength{\listparindent}{\itemindent}
 \setlength{\itemsep}{\bibsep}\setlength{\parsep}{\z@}%
    \ifNAT@openbib
