@@ -140,6 +140,7 @@
 
 % Зачем: Начинаем разделы с новой страницы
 \newcommand{\sectionbreak}{\clearpage}
+\newcommand{\sectioncenteredbreak}{\clearpage}
 
 % Зачем: Задает стиль заголовков раздела жирным шрифтом, прописными буквами, без точки в конце
 % Почему: Пункты 2.1.1, 2.2.5, 2.2.6 и ПРИЛОЖЕНИЕ Л Требований по оформлению пояснительной записки.
@@ -150,7 +151,7 @@
   {1em \@plus 1ex \@minus .2ex}{\MakeUppercase}
 
 \titlespacing{\section}
-  {\parindent}{0em}{1em \@plus .2ex}
+  {\parindent}{\z@}{1em \@plus .2ex}
 \makeatother
 
 % Зачем: Задает стиль заголовков подразделов
@@ -186,9 +187,9 @@
 \titleformat{\sectioncentered}
   {\centering\hyphenpenalty=10000\normalfont\large\bfseries}
   {}
-  {1em \@plus 1ex \@minus .2ex}{\MakeUppercase}
+  {\z@}{\MakeUppercase}
 \titlespacing{\sectioncentered}
-  {0em}{1em \@plus 1ex \@minus .2ex}{1em \@plus .2ex}
+  {\z@}{\z@}{1em \@plus .2ex}
 \makeatother
 
 
@@ -417,6 +418,9 @@
 
 % Для оформления таблиц не влязящих на 1 страницу
 \usepackage{longtable}
+
+% Для "floating longtables"
+\usepackage{afterpage}
 
 % Для включения pdf документов в результирующий файл
 \usepackage{pdfpages}

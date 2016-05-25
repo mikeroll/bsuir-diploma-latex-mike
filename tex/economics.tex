@@ -10,9 +10,9 @@
 
 % ---
 
-Целью дипломного проектирования является создание программного средства для распознавания уникальных идентификаторов цифровых устройств с целью их аутентификации. Данное ПС реализует протокол аутентификации на основе использования и анализа информации, полученной от специального компонента цифрового устройства, выполненного в виде физически неклонируемой функции (ФНФ). Использование ФНФ позволяет добиться целостности и неклонируемости идентификатора устройства и однозначности при проверке подлинности устройства. Основными достоинствами программного средства являются: высокая производительность при низких системных требованиях; модульная архитектура, разделяющая взаимодействие с устройством и собственно обработку идентификационных данных и аутентификацию.
+Целью дипломного проектирования является создание программного средства для распознавания уникальных идентификаторов цифровых устройств с целью их аутентификации. Данное ПС реализует протокол аутентификации на основе использования и анализа информации, полученной от специального компонента цифрового устройства, выполненного в виде физически неклонируемой функции (ФНФ). Основными достоинствами программного средства являются: высокая производительность при низких системных требованиях; модульная архитектура, разделяющая взаимодействие с устройством, обработку идентификационных данных и аутентификацию.
 
-В данном разделе рассмотрим экономическую эффективность программного средства.  Программный комплекс относится к \complexityGroup-й группе сложности. Категория новизны продукта – <<\noveltyGroup>>. Для оценки экономической эффективности разработанного программного средства необходимо рассчитать смету затрат на разработку, цену и прибыль продажи одной программной системы.
+В данном разделе рассмотрим экономическую эффективность программного средства. Программный комплекс относится к \complexityGroup-й группе сложности. Категория новизны продукта – <<\noveltyGroup>>. Для оценки экономической эффективности ПС необходимо рассчитать смету затрат на разработку, цену и прибыль продажи одной программной системы.
 
 Расчеты выполнены на основе методического пособия ~\cite{palicyn_2006}.
 
@@ -100,16 +100,15 @@
 % ---
 На основании сметы затрат и анализа рынка ПО определяется плановая отпускаемая цена.
 Для составления сметы затрат на создание ПО необходима предварительная оценка трудоемкости ПО и его объёма.
-Расчет объёма программного продукта (количества строк исходного кода) предполагает определение типа программного обеспечения, всестороннее техническое обоснование функций ПО и определение объёма каждой функций.
-Согласно классификации типов программного обеспечения~\cite[с.~59,~приложение 1]{palicyn_2006}, разрабатываемое ПО с наименьшей ошибкой можно классифицировать как ПО методo"=ориентированных расчетов.
+Расчет объёма программного продукта предполагает определение типа программного обеспечения, всестороннее техническое обоснование функций ПО и определение объёма каждой функций.
+Согласно классификации типов программного обеспечения~\cite[с.~59,~приложение 1]{palicyn_2006}, разрабатываемое ПО можно классифицировать как ПО методo"=ориентированных расчетов.
 
 Исходные данные разрабатываемого проекта указаны в таблице~\ref{table:economics:initial_data}.
+\afterpage{
+\begin{longtable}[l]{| >{\raggedright}m{0.62\textwidth}
+                     | >{\centering}m{0.17\textwidth}
+                     | >{\centering\arraybackslash}m{0.13\textwidth}|}
 
-\clearpage
-
-\begin{longtable}{| >{\raggedright}m{0.62\textwidth}
-                  | >{\centering}m{0.17\textwidth}
-                  | >{\centering\arraybackslash}m{0.13\textwidth}|}
     \caption{Исходные данные}
     \label{table:economics:initial_data}
     \\
@@ -202,7 +201,7 @@
     & $ \text{Н}_\text{рса} $ & \num{\supportAndAdaptationRate}
     \\ \hline
 \end{longtable}
-
+}
 
 Общий объём программного продукта определяется исходя из количества и объёма функций, реализованных в программе:
 \begin{equation}
@@ -220,6 +219,7 @@
 \def \totalLOC{9710} % TODO
 \def \totalLOCCorrected{6390} % TODO
 
+\afterpage{
 \begin{longtable}{| >{\centering}m{0.12\textwidth}
                   | >{\raggedright}m{0.40\textwidth}
                   | >{\centering}m{0.18\textwidth}
@@ -239,23 +239,19 @@
   \hline
 
   101 & Организация системы подключаемых модулей
-  & \num{620} & \num{450}
+  & \num{720} & \num{520}
   \\ \hline
 
   102 & Контроль, предварительная обработка и ввод информации
-  & \num{450} & \num{300}
+  & \num{650} & \num{370}
   \\ \hline
 
   111 & Обработка исходных данных и тренировка математической модели
   & \num{3100} & \num{1900}
   \\ \hline
 
-  301 & Интерфейс к базе данных моделей и данных аутентификации
-  & \num{790} & \num{650}
-  \\ \hline
-
-  305 & Защита от несанкционированного доступа к базе
-  & \num{820} & \num{400}
+  301 & Интерфейс к базе данных моделей устройств
+  & \num{890} & \num{770}
   \\ \hline
 
   501 & Монитор ПО (управление работой компонентов)
@@ -271,7 +267,7 @@
   \\ \hline
 
   612 & Аутентификация на основе сравнения реальных данных и математической модели
-  & \num{1100} & \num{700}
+  & \num{1100} & \num{840}
   \\ \hline
 
   Итог & &
@@ -279,6 +275,7 @@
   \\ \hline
 
 \end{longtable}
+}
 
 Перечень и объём функций программного модуля перечислен в таблице~\ref{table:econ:function_sizes}.
 По приведенным данным уточненный объём некоторых функций изменился, и общий уточненный объём ПО
@@ -351,7 +348,7 @@ $ \text{Т}_\text{о} $
   \text{К}_{\text{с}} = \num{1} + \num{\additionalComplexityFactor} = \num{\complexityFactor} \text{\,.}
 \end{equation}
 
-Разрабатываемое ПО использует стандартные компоненты. Согласно справочным данным~\cite[c.~68,~приложение~4, таблица~П.4.5]{palicyn_2006} коэффициент использования стандартных модулей для разрабатываемого приложения
+Разрабатываемое ПО использует стандартные компоненты. Согласно справочным данным~\cite[c.~68,~приложение~4, таблица~П.4.5]{palicyn_2006} коэффициент использования стандартных модулей
 $ \text{К}_\text{т} = \num{\stdModuleUsageFactor} $
 .
 
@@ -363,9 +360,9 @@ $ \text{К}_\text{н} = \num{\noveltyFactor} $
 \begin{equation}
   \label{eq:economics:total_workload_calc}
   \text{Т}_\text{о} = \num{\normativeWorkload}
-                      \times \num{\complexityFactor}
-                      \times \num{\stdModuleUsageFactor}
-                      \times \num{\noveltyFactor}
+                      \cdot \num{\complexityFactor}
+                      \cdot \num{\stdModuleUsageFactor}
+                      \cdot \num{\noveltyFactor}
                     \approx \SI{\totalWorkload}{\text{чел.}/\text{дн.}}
 \end{equation}
 
@@ -414,7 +411,7 @@ $ \text{Т}_\text{р} = \SI{\developmentMonths}{\text{мес.}} = \SI{\developme
   \label{eq:econ:num_of_programmers_calc}
   \text{Ч}_\text{р} = \frac{\num{\totalWorkload}}
                            {\num{\developmentYears}
-                      \times \num{\workingDaysInYear}}
+                      \cdot \num{\workingDaysInYear}}
                     \approx \SI{\requiredProgrammers}{\text{рабочих}}.
 \end{equation}
 
@@ -478,7 +475,6 @@ $ \text{Т}_\text{р} = \SI{\developmentMonths}{\text{мес.}} = \SI{\developme
     & $ \text{Ф}_{\text{р}} $ & среднемесячная норма рабочего времени, час.
 \end{explanation}
 
-
 Подставив данные из таблицы~\ref{table:economics:programmers} в формулу~(\ref{eq:economics:monthly_salary}), приняв значение тарифной ставки 1-го разряда
 $ \text{Т}_{\text{м}_{1}} = \SI{\tariffRate}{\text{\byr}} $
 и среднемесячную норму рабочего времени
@@ -487,14 +483,14 @@ $ \text{Ф}_{\text{р}} = \SI{\workingHoursInMonth}{\text{часов}} $
 \begin{equation}
   \label{eq:economics:monthly_salary_senior}
   \text{Т}_{\text{ч}}^{\text{прогр. \Rmnum{1}-разр.}} =
-      \frac{ \num{\tariffRate} \times \num{\tariffFactorSenior} }
+      \frac{ \num{\tariffRate} \cdot \num{\tariffFactorSenior} }
            { \num{\workingHoursInMonth} }
     = \SI{\hourlySalarySenior}{\text{\byr}/\text{час;}}
 \end{equation}
 \begin{equation}
   \label{eq:economics:monthly_salary_lead}
   \text{Т}_{\text{ч}}^{\text{вед. прогр.}} =
-      \frac{ \num{\tariffRate} \times \num{\tariffFactorLead} }
+      \frac{ \num{\tariffRate} \cdot \num{\tariffFactorLead} }
            { \num{\workingHoursInMonth} }
     = \SI{\hourlySalaryLead}{\text{\byr}/\text{час.}}
 \end{equation}
@@ -521,10 +517,10 @@ $ \text{К} = \num{\bonusRate} $
 получим
 \begin{equation}
   \label{eq:economics:base_salary_calc}
-  \text{З}_{\text{о}} = (\hourlySalarySenior \times \num{\workloadSenior} +
-                         \hourlySalaryLead \times \num{\workloadLead})
-                        \times \num{\workingHoursInDay}
-                        \times \num{\bonusRate}
+  \text{З}_{\text{о}} = (\hourlySalarySenior \cdot \num{\workloadSenior} +
+                         \hourlySalaryLead \cdot \num{\workloadLead})
+                        \cdot \num{\workingHoursInDay}
+                        \cdot \num{\bonusRate}
                       = \SI{\baseSalary}{\text{\byr}} \text{\,.}
 \end{equation}
 
@@ -545,11 +541,12 @@ $ \text{Н}_{\text{д}} = \num{\additionalSalaryRate\%} $
 \begin{equation}
   \label{eq:econ:additional_salary_calc}
   \text{З}_{\text{д}} =
-    \frac{\num{\baseSalary} \times 20\%}
+    \frac{\num{\baseSalary} \cdot 20\%}
          {100\%} \approx \SI{\additionalSalary}{\text{\byr}} \text{\,.}
 \end{equation}
 
 
+\clearpage % Hack
 
 \subsection{Расчёт расходов и прогнозируемой цены ПО}
 
@@ -615,19 +612,19 @@ $ \text{Н}_{\text{д}} = \num{\additionalSalaryRate\%} $
 
 % ---
 
-Расчеты общей суммы расходов и прогнозируемой цены ПО, а также его себестоимости сведены в таблицу~\ref{table:economics:expenses_and_cost}.
+Расчеты общей суммы расходов и прогнозируемой цены ПО, а также его себестоимости производятся в соответствии с установлеными законодательством и регламентом предприятия нормативами. Результаты расчётов сведены в таблицу~\ref{table:economics:expenses_and_cost}.
 
 
-\begin{longtable}{| >{\raggedright}m{0.27\textwidth}
-                  | >{\centering}m{0.16\textwidth}
-                  | >{\centering}m{0.35\textwidth}
-                  | >{\centering\arraybackslash}m{0.15\textwidth}|}
+\begin{longtable}[ht]{| >{\raggedright}m{0.27\textwidth}
+                      | >{\centering}m{0.16\textwidth}
+                      | >{\raggedright}m{0.35\textwidth}
+                      | >{\raggedleft\arraybackslash}m{0.15\textwidth}|}
     \caption{Расчет себестоимости и отпускной цены ПО}
     \label{table:economics:expenses_and_cost}
     \\
 
     \hline
-    {\begin{center} Наименование статей \end{center} } & \mbox{Норматив,} \% & Методика расчета & \mbox{Значение,} руб.
+    \centering{Наименование статей} & \centering{\mbox{Норматив,} \%} & \centering{\mbox{Методика расчета} & \mbox{Значение,} руб.
     \\ \hline
 
     Отчисления в фонд социальной защиты и обязательного страхования
@@ -749,12 +746,13 @@ $ \text{Н}_{\text{д}} = \num{\additionalSalaryRate\%} $
 \begin{equation}
   \label{eq:economics:net_profit}
   \text{П}_\text{ч} =
-    \num{\profitMoney} \times \left( 1 - \frac{\num{\profitTaxRate\%}}{100\%} \right) = \SI{\netProfit}{\text{\byr}} \text{\,.}
+    \num{\profitMoney} \cdot \left( 1 - \frac{\num{\profitTaxRate\%}}{100\%} \right) = \SI{\netProfit}{\text{\byr}} \text{\,.}
 \end{equation}
 
 Программное обеспечение разрабатывалось для одного заказчика в связи с этим экономическим эффектом разработчика будет являться чистая прибыль от реализации~$ \text{П}_\text{ч} $.
 Рассчитанные данные приведены в таблице~\ref{table:economics:calculated_data}.
 
+\clearpage
 \begin{longtable}{| >{\raggedright}m{0.60\textwidth}
                   | >{\centering}m{0.17\textwidth}
                   | >{\centering\arraybackslash}m{0.15\textwidth}|}
@@ -763,7 +761,7 @@ $ \text{Н}_{\text{д}} = \num{\additionalSalaryRate\%} $
     \\
 
     \hline
-    {\begin{center} Наименование \end{center} }
+    \centering{Наименование}
     & Условное обозначение
     & Значение
     \\ \hline
@@ -873,11 +871,9 @@ $ \text{Н}_{\text{д}} = \num{\additionalSalaryRate\%} $
 
 \subsection{Выводы по технико-экономическому обоснованию}
 
-Программное средство разрабатывалось для одного заказчика и в связи с этим экономическим эффектом разработчика будет являться чистая прибыль от реализации $ \text{П}_\text{ч} $. Рассчитанные данные приведены в таблице~\ref{table:economics:calculated_data}.Таким образом, было произведено технико-экономическое обоснование разрабатываемого проекта, составлена смета затрат и рассчитана прогнозируемая прибыль, а также показана экономическая целесообразность разработки.
-
-Программное средство распознавания уникальных неклонируемых идентификаторов цифровых устройств является выгодным программным продуктом.
+Программное средство распознавания уникальных неклонируемых идентификаторов цифровых устройств является экономически выгодным программным продуктом.
 Прогнозируемая отпускная цена ($\text{Ц}_\text{о}$) составляет \num{\sellingPrice} рублей. Таким образом, данная разработка является экономически целесообразной.
-Чистая прибыль от реализации ПС ($ \text{П}_\text{ч} $ = \num{\netProfit} рублей) представляет собой экономический эффект от создания нового программного средства.
+Программное средство разрабатывалось для одного заказчика и в связи с этим чистая прибыль от реализации ПС ($ \text{П}_\text{ч} $ = \num{\netProfit} рублей) представляет собой экономический эффект от создания нового программного средства.
 
 
 \hfill
