@@ -93,15 +93,14 @@
 % Почему: Пункт 2.2.3 Требований по оформлению пояснительной записки.
 \setcounter{secnumdepth}{3}
 
-
-% Зачем: subsubsection также должны присутствовать в содержании
-\setcounter{tocdepth}{3}
+% Содержание из двух уровней
+\setcounter{tocdepth}{2}
 
 
 % Зачем: Настраивает отступ между таблицей с содержанием и словом СОДЕРЖАНИЕ
 % Почему: Пункт 2.2.7 Требований по оформлению пояснительной записки.
 \usepackage{tocloft}
-\setlength{\cftbeforetoctitleskip}{-4em}
+\setlength{\cftbeforetoctitleskip}{-3em}
 \setlength{\cftaftertoctitleskip}{1em}
 
 
@@ -207,6 +206,15 @@
 % Зачем: Директория в которой будет происходить поиск картинок
 \graphicspath{{figures/}}
 
+% Для верстки в ландшафтном режиме (и что-то еще)
+\usepackage[absolute]{textpos}
+\usepackage{lscape,lipsum}
+\fancypagestyle{lscape}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[R] {%
+\begin{textblock}{1}(13,1){\rotatebox{90}{\thepage}}\end{textblock}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
 
 % Зачем: Добавление подписей к рисункам
 \usepackage[nooneline]{caption}
@@ -262,10 +270,10 @@
     %%% Следующие строки определяют специфические требования разных редакций стандартов. Раскоменнтируйте нужные 2 строки
     %% стандартный абзац, СТП-01 2010
     %\par
-    %\tabularx{\textwidth-\fivecharsapprox}{@{}ll@{ --- } X }
+    %\tabularx{\textwidth-\fivecharsapprox}{@{}ll@{ -- } X }
     %% без отступа, СТП-01 2013
     \noindent
-    \tabularx{\textwidth}{@{}ll@{ --- } X }
+    \tabularx{\textwidth}{@{}ll@{ -- } X }
     }
     {
     \\[\parsep]
@@ -455,3 +463,8 @@
    \fi
 }
 
+\lstdefinestyle{commonstyle} {
+  breaklines=true,
+  columns=fullflexible,
+  basicstyle=\ttfamily\fontsize{13}{15.6}\selectfont,
+}

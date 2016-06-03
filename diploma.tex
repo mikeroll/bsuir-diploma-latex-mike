@@ -5,25 +5,49 @@
 \sloppy
 
 % Титульник
-\input{tex/titlepage}
+\input{tex/titlepage} %
+
+% Лист задания
+\input{tex/taskpage} %
 
 % Реферат
-\input{tex/abstractv2}
-
-\setcounter{page}{5}
+\input{tex/abstractv2} %
 
 % Содержание
-\input{tex/toc}
+\clearpage \setcounter{page}{5}
+\input{tex/toc} %
 
-% Глава ? Обзор предметной области
-\input{tex/domain}
+% Определения и сокращения
+\input{tex/terminology} %
 
-% Глава ? Используемые технологии
-\input{tex/technologies}
+% Введение
+\input{tex/intro} %
 
-% Глава ? Технико-экономическое обоснование
-\input{tex/economics}
+% Глава 1 Обзор предметной области
+\input{tex/domain} %
 
-% Список литературы
-\input{tex/references}
+% Глава 2 Используемые технологии
+\input{tex/technologies} %
+
+% Глава 3 Проектирование архитектуры программного средства
+\input{tex/architecture} %
+
+% Глава 4 Тестирование программного средства
+\input{tex/testing} %
+
+% Глава 5 Использование разработанного программного средства
+\input{tex/manpage} %
+
+% Глава 6 Технико-экономическое обоснование разработки ПС
+\input{tex/economics} %
+
+% Заключение
+\input{tex/outro} %
+
+% Список использованных источников
+\input{tex/references} %
+
+% % Приложение А Исходный код программного средства
+\input{tex/sources} %
+
 \end{document}

@@ -620,12 +620,18 @@ $ \text{Н}_{\text{д}} = \num{\additionalSalaryRate\%} $
                       | >{\raggedright}m{0.35\textwidth}
                       | >{\raggedleft\arraybackslash}m{0.15\textwidth}|}
     \caption{Расчет себестоимости и отпускной цены ПО}
-    \label{table:economics:expenses_and_cost}
-    \\
-
+    \label{table:economics:expenses_and_cost}\\
     \hline
-    \centering{Наименование статей} & \centering{\mbox{Норматив,} \%} & \centering{\mbox{Методика расчета} & \mbox{Значение,} руб.
+    \centering{Наименование статей} & \centering{\mbox{Норматив,} \%} & \centering{\mbox{Методика расчета}} & \mbox{Значение,} руб.
     \\ \hline
+    \endfirsthead
+    \caption*{Продолжение таблицы \ref{table:economics:expenses_and_cost}}\\
+    \hline
+    \centering{Наименование статей} & \centering{\mbox{Норматив,} \%} & \centering{\mbox{Методика расчета}} & \mbox{Значение,} руб.
+    \\ \hline
+    \endhead
+    \endlastfoot
+
 
     Отчисления в фонд социальной защиты и обязательного страхования
     & $ \text{Н}_{\text{сз}} = \num{\socialProtectionRate} $
@@ -701,7 +707,7 @@ $ \text{Н}_{\text{д}} = \num{\additionalSalaryRate\%} $
     &
     & $ \text{Ц}_{\text{п}} = \text{С}_{\text{п}} + \text{П}_{\text{с}}$
     & \num{\estimatedPrice}
-    \\ \hline
+    \\
 
     Отчисления и налоги в местный и республиканский бюджеты
     & $ \text{Н}_{\text{мр}} = \num{\localRepubTaxRate} $
@@ -757,8 +763,10 @@ $ \text{Н}_{\text{д}} = \num{\additionalSalaryRate\%} $
                   | >{\centering}m{0.17\textwidth}
                   | >{\centering\arraybackslash}m{0.15\textwidth}|}
     \caption{Рассчитанные данные}
-    \label{table:economics:calculated_data}
-    \\
+    \label{table:economics:calculated_data}\\
+    \endfirsthead
+    \caption*{Продолжение таблицы \ref{table:economics:calculated_data}}\\
+    \endhead
 
     \hline
     \centering{Наименование}
@@ -872,7 +880,6 @@ $ \text{Н}_{\text{д}} = \num{\additionalSalaryRate\%} $
 \subsection{Выводы по технико-экономическому обоснованию}
 
 Программное средство распознавания уникальных неклонируемых идентификаторов цифровых устройств является экономически выгодным программным продуктом.
-Прогнозируемая отпускная цена ($\text{Ц}_\text{о}$) составляет \num{\sellingPrice} рублей. Таким образом, данная разработка является экономически целесообразной.
 Программное средство разрабатывалось для одного заказчика и в связи с этим чистая прибыль от реализации ПС ($ \text{П}_\text{ч} $ = \num{\netProfit} рублей) представляет собой экономический эффект от создания нового программного средства.
 
 
